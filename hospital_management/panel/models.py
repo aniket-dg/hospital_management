@@ -54,7 +54,7 @@ class Patient(models.Model):
     disease_category = models.CharField(choices=disease_choices, max_length=10)
     problem = models.TextField()
     previous_health_issue = models.TextField()
-
+    date_admitted = models.DateField(auto_now=True)
     def __str__(self):
         return self.patient_name
 
