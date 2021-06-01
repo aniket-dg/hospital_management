@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views import View
-from authentication.forms import LoginForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
@@ -10,7 +9,6 @@ class MyLoginView(View):
     template_name = 'authentication/index.html'
 
     def get(self, request):
-        self.form = LoginForm()
         return render(request, self.template_name)
     def post(self, request):
         email = request.POST['email_address']
