@@ -1,5 +1,6 @@
 from django.urls import path
-from authentication.views import index
+from authentication.views import MyLoginView
 urlpatterns = [
-    path('', index, name='indexPage'),
+    path('', MyLoginView.as_view()),
+    path('authenticate/', MyLoginView.as_view()),
 ]
