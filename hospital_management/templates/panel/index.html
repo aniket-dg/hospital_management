@@ -1,0 +1,183 @@
+{% extends 'panel/base.html' %}
+{% load static %}
+{% block content %}
+        <!-- Body Start -->
+        <div class="relative md:pt-32 mb-auto pt-12">
+          <div class="px-4 md:px-10 mx-auto w-full">
+            <div>
+            <!-- Upper Icon for Status -->
+            <div class="flex flex-wrap">
+              <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+                <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+                  <div class="flex-auto p-4">
+                    <div class="flex flex-wrap">
+                      <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
+                        <h5 class="text-blueGray-400 uppercase font-bold text-xs">
+                          Today's Appointment
+                        </h5>
+                        <span class="font-semibold text-xl text-blueGray-700">
+                          35
+                        </span>
+                      </div>
+                      <div class="relative w-auto pl-4 flex-initial">
+                        <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-blue-400">
+                          <i class="fa fa-pencil"></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+                <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+                  <div class="flex-auto p-4">
+                    <div class="flex flex-wrap">
+                      <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
+                        <h5 class="text-blueGray-400 uppercase font-bold text-xs">
+                          Today's Operation
+                        </h5>
+                        <span class="font-semibold text-xl text-blueGray-700">
+                          10
+                        </span>
+                      </div>
+                      <div class="relative w-auto pl-4 flex-initial">
+                        <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-blue-400">
+                          <i class="fa fa-opencart"></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+                <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+                  <div class="flex-auto p-4">
+                    <div class="flex flex-wrap">
+                      <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
+                        <h5 class="text-blueGray-400 uppercase font-bold text-xs">
+                          Today's Board Meetings
+                        </h5>
+                        <span class="font-semibold text-xl text-blueGray-700">
+                          2
+                        </span>
+                      </div>
+                      <div class="relative w-auto pl-4 flex-initial">
+                        <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-blue-400">
+                          <i class="fa fa-meetup"></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+                <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+                  <div class="flex-auto p-4">
+                    <div class="flex flex-wrap">
+                      <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
+                        <h5 class="text-blueGray-400 uppercase font-bold text-xs">
+                          Total Patient Recovered
+                        </h5>
+                        <span class="font-semibold text-xl text-blueGray-700">
+                          1400
+                        </span>
+                      </div>
+                      <div class="relative w-auto pl-4 flex-initial">
+                        <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-blue-400">
+                          <i class="fa fa-users"></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+             </div> 
+            <!-- Icon for Status End here -->
+
+
+             <!-- Appointment -->
+             <div class="mt-6">
+             <div class="w-full mb-12 xl:mb-0 px-4">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+                <div class="rounded-t mb-0 px-4 py-3 border-0">
+                  <div class="flex flex-wrap items-center">
+                    <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                      <h3 class="font-semibold text-base text-blueGray-700">
+                        Today's Appointment
+                      </h3>
+                    </div>
+                    <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+                      <button
+                        class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1"
+                        type="button"
+                        style="transition:all .15s ease"
+                      >
+                        See all
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="block w-full overflow-x-auto">
+                  <!-- Projects table -->
+                  <table class="items-center w-full bg-transparent border-collapse">
+                    <thead>
+                      <tr>
+                        <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                          Visitor Name
+                        </th>
+                        <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                          Reason
+                        </th>
+                        <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                          Time
+                        </th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                          Arjun Pavar
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                          Discussion about new Building of Hospital at Nehru Palace..
+                        </td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                          11.30 A.M.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                          Kartik Patil
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                          Family Friend
+                        </td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                          12.00 P.M.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            </div>
+             <!-- Appointment End here -->
+            </div>
+          </div>
+        </div>
+        <script>
+          var e = document.getElementById("dashboard");
+          e.classList.remove('text-blueGray-700', 'hover:text-blueGray-500')
+          e.classList.add('text-blue-500', 'hover:text-blue-600')
+        </script>
+{% endblock %}
+            
