@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'panel',
     'authentication',
     'patient',
+    
 ]
 
 
