@@ -1,5 +1,7 @@
 # hospital_management
-Simple Hospital Management System for add, view, delete, search patient data
+Simple Hospital Management System for add, view, delete, search patient data 
+
+ [Live Preview here](http://hospitalsystemmanagement25.pythonanywhere.com/)
 
 ## Installation
 ```
