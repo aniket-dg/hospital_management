@@ -50,7 +50,7 @@
                 <a
                   href=""
                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Aniket Gavali</a
+                  >{{ request.user.first_name }}</a
                 >
                 <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
                 <a
@@ -88,10 +88,10 @@
                 </div>
               </div>
             </div>
-            <form class="mt-6 mb-4 md:hidden">
+            <form class="mt-6 mb-4 md:hidden" method="GET" action="/panel/patient/search/">
               <div class="mb-3 pt-0">
                 <input
-                  type="text"
+                  type="text" name="q"
                   placeholder="Search"
                   class="border-0 px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
                 />
@@ -110,17 +110,17 @@
               <li class="items-center">
                 <a id = "addPatient"
                   class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  href="/panel/patient.add/"
+                  href="/panel/patient/list.view/"
                   ><i class="fa fa-plus text-blueGray-400 mr-2 text-sm"></i>
-                  Add Patient</a
+                  Patient</a
                 >
               </li>
               <li class="items-center">
                 <a
                   class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-                  href="patient_list.html"
+                  href="#"
                   ><i class="fa fa-list-alt text-blueGray-400 mr-2 text-sm"></i>
-                  Patient List</a
+                  Doctors</a
                 >
               </li>
               <li class="items-center">
@@ -128,7 +128,7 @@
                   class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                   href="#"
                   ><i class="fa fa-user-o text-blueGray-400 mr-2 text-sm"></i>
-                  Staff</a
+                  Profile</a
                 >
               </li>
 
@@ -171,7 +171,7 @@
               >Dashboard</a
             >
             <form
-              class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
+            method="GET" action="/panel/patient/search/"  class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
             >
               <div class="relative flex w-full flex-wrap items-stretch">
                 <span
@@ -179,7 +179,7 @@
                   ><i class="fa fa-search"></i
                 ></span>
                 <input
-                  type="text"
+                  type="text" name="q"
                   placeholder="Search here..."
                   class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
                 />
@@ -188,7 +188,7 @@
             <ul
               class="flex-col md:flex-row list-none items-center hidden md:flex"
             >
-              <a class="text-blueGray-500 block" href="#pablo" onclick="openDropdown(event,'user-dropdown')">
+              <a class="text-blueGray-500 block" href="##" onclick="openDropdown(event,'user-dropdown')">
                 <div class="items-center flex">
                   <span
                     class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"
@@ -207,7 +207,7 @@
                 <a
                   href="#"
                   class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                  >Aniket Gavali</a
+                  >{{ request.user.first_name }}</a
                 >
                 <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
                 <a
