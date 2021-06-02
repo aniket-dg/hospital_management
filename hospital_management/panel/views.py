@@ -7,7 +7,9 @@ from django.contrib import messages
 from patient.filters import PatientFilter
 from django.db.models import Q
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
 # Create your views here.
+
 class DashboardView(View):
     template_name = 'panel/index.html'
     def get(self, request):
@@ -44,7 +46,7 @@ class PatientView(ListView):
     def get(self, request):
         context = {}
         patients = Patient.objects.all()
-        paginator = Paginator(patients, 2)
+        paginator = Paginator(patients, 4)
         page_number = request.GET.get('page', 1)
         page = paginator.get_page(page_number)
 
@@ -96,13 +98,13 @@ class PatientEdit(View):
         messages.success(request, "Patient data edited successfully")
         str = "/panel/patient/{id}/detail.view/".format(id = id)
         return redirect(str)
-
+@login_required
 def deletePatient(request, id):
     patient = Patient.objects.filter(id = id).delete()
     messages.warning(request, "Patient data deleted successfully")
     return redirect('/panel/patient/list.view/')
 
-
+@login_required
 def searchData(request):
     if request.GET.get('q'):
        data = str(request.GET.get('q'))
