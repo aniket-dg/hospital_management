@@ -42,13 +42,13 @@ class Patient(models.Model):
     )
 
     patient_name = models.CharField(max_length=30)
-    contact_no = models.IntegerField(primary_key=False, null=False)
+    contact_no = models.CharField(max_length=10)
     email = models.EmailField()
     state = models.CharField(max_length=40, choices=state_choices)
     street_address = models.TextField()
-    house_no = models.IntegerField(primary_key=False)
+    house_no = models.CharField(max_length=10)
     city = models.CharField(max_length=30)
-    zip = models.IntegerField()
+    zip = models.CharField(max_length=10)
     dob = models.DateField(auto_now=False)
     gender = models.CharField(choices=gender_choice, max_length=6)
     maritual_status = models.CharField(choices=maritual_choices, max_length=10)
@@ -58,4 +58,6 @@ class Patient(models.Model):
     date_admitted = models.DateField(auto_now=True)
     def __str__(self):
         return self.patient_name
+    class Meta:
+        ordering = ['id']
 
