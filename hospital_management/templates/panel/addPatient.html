@@ -2,23 +2,31 @@
 {% load static %}
 {% block content %}
         
+
+
+
         <div class="relative md:pt-32 pb-32 pt-12">
             <div class="mt-10 sm:mt-0">
   <div class="mx-5 lg:mx-10">
     <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Patient Information</h3>
     <div class="mt-5 md:mt-0 md:col-span-2">
+
+
+              
+
       <form action="#" method="POST">
+        {% csrf_token %}
         <div class="shadow overflow-hidden sm:rounded-md">
           <div class="px-4 py-5 bg-white sm:p-6">
             <div class="grid grid-cols-6 gap-6">
               <div class="col-span-6 sm:col-span-3">
                 <label for="first_name" class="block text-sm font-medium text-gray-700">Patient Name</label>
-                <input type="text" name="first_name" id="first_name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                <input type="text" name="patient_name" id="first_name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
               </div>
 
               <div class="col-span-6 sm:col-span-3">
                 <label for="last_name" class="block text-sm font-medium text-gray-700">Contact No.</label>
-                <input type="text" name="last_name" id="last_name" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                <input type="text" name="contact_no" id="last_name" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
               </div>
 
               <div class="col-span-6 sm:col-span-4">
@@ -30,17 +38,17 @@
 
               <div class="col-span-6 sm:col-span-3">
                 <label for="country" class="block text-sm font-medium text-gray-700">State</label>
-                <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                  <option>Andhra Pradesh</option>
-                  <option>Assam</option>
-                  <option>Bihar</option>
-                  <option>Goa</option>
-                  <option>Gujarat</option>
-                  <option>Haryana</option>
-                  <option>Himachal Pradesh</option>
-                  <option>Karnataka</option>
-                  <option>Kerala</option>
-                  <option>Maharashtra</option>
+                <select id="country" name="state" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Maharashtra">Maharashtra</option>
                 </select>
               </div>
 
@@ -51,68 +59,68 @@
 
               <div class="col-span-6 sm:col-span-6 lg:col-span-2">
                 <label for="city" class="block text-sm font-medium text-gray-700">House No</label>
-                <input type="text" name="city" id="city" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                <input type="text" name="house_no" id="city" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
               </div>
 
               <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                 <label for="state" class="block text-sm font-medium text-gray-700">City</label>
-                <input type="text" name="state" id="state" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                <input type="text" name="city" id="state" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
               </div>
 
               <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                 <label for="postal_code" class="block text-sm font-medium text-gray-700">ZIP / Postal</label>
-                <input type="text" name="postal_code" id="postal_code" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                <input type="text" name="zip_code" id="postal_code" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
               </div>
 
 
               <div class="col-span-6 sm:col-span-6 lg:col-span-2">
                 <label for="city" class="block text-sm font-medium text-gray-700">Date of Birth</label>
-                <input type="date" name="city" id="city" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                <input type="date" name="dob" id="city" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
               </div>
 
               <div class="col-span-6 sm:col-span-6 lg:col-span-2">
                 <label for="country" class="block text-sm font-medium text-gray-700">Gender</label>
-                <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Other</option>
+                <select id="country" name="gender" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                   </select>
               </div>
 
               <div class="col-span-6 sm:col-span-6 lg:col-span-2">
                 <label for="country" class="block text-sm font-medium text-gray-700">Maritual Status</label>
-                <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                  <option>Single</option>
-                  <option>Married</option>
-                  <option>Divorsed</option>
-                  <option>Widowed</option>
+                <select id="country" name="maritual_status" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  <option value="Single">Single</option>
+                  <option value="Married">Married</option>
+                  <option value="Divorsed">Divorsed</option>
+                  <option value="Widowed">Widowed</option>
                   </select>
               </div>
 
               <div class="col-span-6 sm:col-span-6 lg:col-span-2">
                 <label for="country" class="block text-sm font-medium text-gray-700">Disease Category</label>
-                <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                  <option>Topographic</option>
-                  <option>Anatomic</option>
-                  <option>Physiological</option>
-                  <option>Pathological</option>
-                  <option>Etiologic</option>
-                  <option>Juristic</option>
-                  <option>Epidemiological</option>
-                  <option>Statistical</option>
-                  <option>Other</option>
+                <select id="country" name="disease_category" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  <option value="Topographic">Topographic</option>
+                  <option value="Anatomic">Anatomic"</option>
+                  <option value="Physiological">Physiological</option>
+                  <option value="Pathological">Pathological</option>
+                  <option value="Etiologic">Etiologic</option>
+                  <option value="Juristic">Juristic"</option>
+                  <option value="Epidemiological">Epidemiological</option>
+                  <option value="Statistical">Statistical</option>
+                  <option value="Other">Other</option>
                   </select>
               </div>
 
               <div class="col-span-6">
                 <label for="street_address" class="block text-sm font-medium text-gray-700">Problem</label>
-                <textarea name="street_address" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="write about patient problem in brief..........."></textarea>
+                <textarea name="problem" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="write about patient problem in brief..........."></textarea>
               </div>
 
               
               <div class="col-span-6 sm:col-span-4">
                 <label for="country" class="block text-sm font-medium text-gray-700">Previous Health Issue</label>
-                <textarea name="street_address" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="write about patient Previous helath problem in brief..........."></textarea>
+                <textarea name="previous_health_issue" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="write about patient Previous helath problem in brief..........."></textarea>
             </div>
 
               
