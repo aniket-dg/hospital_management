@@ -14,15 +14,14 @@ class MyLoginView(View):
         email = request.POST['email_address']
         password = request.POST['password']
         user = authenticate(request, username = email, password = password)
-        print("Authentication")
         if user is not None:
             login(request, user)
             return redirect('/panel/dashboard.view')
         else:
             messages.warning(request, "Invalid Login Credentials")
-            return redirect('/authentication/')
+            return redirect('/accounts/')
 
 def logoutUser(request):
     logout(request)
-    return redirect('/authentication/') 
+    return redirect('/accounts/') 
         
