@@ -4,7 +4,7 @@ from django.views.generic.list import ListView
 from patient.models import Patient
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import messages
-from patient.filters import PatientFilter
+
 from django.db.models import Q
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
