@@ -1,7 +1,6 @@
 from django.urls import path
 from panel.views import DashboardView, PatientOp, PatientView, PatientDetails, PatientEdit, deletePatient, searchData
-from django_filters.views import FilterView
-from patient.filters import PatientFilter
+
 from django.contrib.auth.decorators import login_required
 urlpatterns = [
     path('', login_required(DashboardView.as_view()), name="Dashboard"),
